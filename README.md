@@ -6,6 +6,10 @@ DeepH-HONPAS is a computational package designed for electronic structure calcul
 
 # Installation
 
+To prepare the environment on a Windows/Linux/MacOS machine, directly use:
+conda create -n DeepH-HONPAS python=3.11
+'''
+For denpendencies, both 'pip' and 'conda' are possible, the required packages are 
 For environment setup, please refer to https://github.com/mzjb/DeepH-pack?tab=readme-ov-file.
 When the environment activated, install with:
 
@@ -19,8 +23,6 @@ For DeepH-E3, the main difference is the neural network structure used in the tr
 # Input
 
 # Output
-
-# Dependencies
 
 # Contributing
 
