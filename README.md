@@ -24,8 +24,8 @@ If you only want to try the machine learning code, the dataset for twisted bilay
 
 # Usage
 
-For preprocess, train, and inference, please edit the .ini files in the scripts/ directory and run the following commands. Here are the commands for using DeepH with HONPAS.
-To prepare the dataset, we recommend using the preprocess.ini in the scripts/ directory. Set the paths for 'raw_dir' and 'processed_dir' and run:
+For preprocess, train, and inference, please edit the .ini files in the deeph/scripts/ directory and run the following commands. Here are the commands for using DeepH with HONPAS.
+To prepare the dataset, we recommend using the preprocess.ini in the deeph/scripts/ directory. Set the paths for 'raw_dir' and 'processed_dir' and run:
 ```
 deeph-preprocess --config preprocess.ini
 ```
