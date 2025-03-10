@@ -1,8 +1,0 @@
-Metadata-Version: 2.1
-Name: deeph
-Version: 0.2.2
-Summary: DeepH-pack is the official implementation of the Deep Hamiltonian (DeepH) method.
-Download-URL: https://github.com/mzjb/DeepH-pack
-Author: He Li
-License: MIT
-Requires-Python: >=3.9

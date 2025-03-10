@@ -1,5 +1,0 @@
-[console_scripts]
-deeph-evaluate = deeph.scripts.evaluate:main
-deeph-inference = deeph.scripts.inference:main
-deeph-preprocess = deeph.scripts.preprocess:main
-deeph-train = deeph.scripts.train:main
