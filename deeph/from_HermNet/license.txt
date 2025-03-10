@@ -1,1 +1,0 @@
-The code in this folder was obtained from "https://github.com/sakuraiiiii/HermNet"
