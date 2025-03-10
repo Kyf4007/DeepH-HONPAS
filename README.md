@@ -20,7 +20,7 @@ pip install .
 ```
 
 HONPAS is required for dataset generation. Please refer to https://github.com/xmqin/HONPAS?tab=GPL-3.0-1-ov-file for HONPAS installation and usage.
-If you only want to try the machine learning code, the dataset for twisted bilayer graphene (TBG) and twisted bilayer molybdenum disulfide (TBMos2) are also available at Zenodo.
+If you only want to try the machine learning code, the dataset for twisted bilayer graphene (TBG) and twisted bilayer molybdenum disulfide (TBMoS2) are also available at Zenodo.
 
 # Usage
 
@@ -48,5 +48,5 @@ After setting the proper paths in .ini files, the training and inference tasks c
 python deephe3-train.py train.ini
 python deephe3-eval.py eval.ini
 ```
-Note that after excecuting 'deephe3-eval', the predicted Hamiltonians are available in the working directory, but 'deeph-inference' is still needed to calculate the band structure. Thus setting the 'task = [5]' in inference.ini, set the 'work_dir' and run 'deeph-inferenece --config inference.ini' to sparse matrix calculation for band structures.
+Note that after excecuting 'deephe3-eval', the predicted Hamiltonians are available in the working directory, but 'deeph-inference' is still needed to calculate the band structure. Thus set the 'task = [5]' in inference.ini, set the 'work_dir' and run 'deeph-inferenece --config inference.ini' to sparse matrix calculation for band structures.
 
