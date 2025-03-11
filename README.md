@@ -20,7 +20,7 @@ pip install .
 ```
 
 HONPAS is required for dataset generation. Please refer to https://github.com/xmqin/HONPAS?tab=GPL-3.0-1-ov-file for HONPAS installation and usage.
-If you only want to try the machine learning code, the dataset for twisted bilayer graphene (TBG) and twisted bilayer molybdenum disulfide (TBMoS2) are also available at Zenodo.
+If you only want to try the machine learning code, the dataset for twisted bilayer graphene (TBG) and twisted bilayer molybdenum disulfide (TBMoS2) are also available at Zenodo [https://doi.org/10.5281/zenodo.14979348].
 
 # Usage
 
