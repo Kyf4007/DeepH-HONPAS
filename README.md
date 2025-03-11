@@ -10,13 +10,29 @@ To prepare the environment on a Windows/Linux/MacOS machine, directly use:
 ```
 conda create -n DeepH-HONPAS python=3.11
 ```
-For denpendencies, both 'pip' and 'conda' are possible. The required packages can be found in https://github.com/mzjb/DeepH-pack?tab=readme-ov-file.
-When the environment activated, install with:
+For denpendencies, both 'pip' and 'conda' are possible. The required packages can be found in https://github.com/mzjb/DeepH-pack?tab=readme-ov-file. The following packages are mandatory:
+- NumPy
+- SciPy
+- e3nn
+- pymatgen
+- h5py
+- pathos
+- psutil
+- PyTorch
+- PyTorch Geometric
+
+For the installation of PyTorch, please refer to the official website and select the suitable command for your system. For example, to install the latest version on a compatible GPU with CUDA installed:
+```
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+```
+The version of PyTorch Geometric needs to be compatible with PyTorch version. To install PyTorch Geometric, additional libraries are necessary: 'pyg-lib', 'torch-cluster', 'torch-sparse', 'torch-scatter', 'torch-spline-conv'. 
+Additionally, if electronic band structure calculation is required ('task = [5]' in the inference step), a Julia interpreter is required. Please refer to [https://github.com/mzjb/DeepH-pack] to install Julia. Note that Julia code works only in band calculation, and the predicted Hamiltonian already comes in handy after 'task = [4]', thus the Julia interpreter can be installed elsewhere.
+
+When the environment activated, install DeepH-HONPAS with:
 ```
 git clone
 cd DeepH-HONPAS
 pip install .
-
 ```
 
 HONPAS is required for dataset generation. Please refer to https://github.com/xmqin/HONPAS?tab=GPL-3.0-1-ov-file for HONPAS installation and usage.
