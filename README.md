@@ -21,6 +21,23 @@ For denpendencies, both 'pip' and 'conda' are possible. The required packages ca
 - PyTorch
 - PyTorch Geometric
 
+The version labels are not strict, but here we provide an example on a personal computer. The following is the hardware and system configuration of the personal computer used during the development and testing of this project. This information is provided for reference only; the code should be compatible with a wide range of systems that meet the software requirements.
+CPU: Intel® Core™ i9-10850K @ 3.60GHz
+RAM: 64 GB
+GPU: NVIDIA GeForce RTX 4090 (24 GB VRAM)
+Operating System: 64-bit Windows 10
+CUDA Version: 12.8
+
+Here are the installation commands for DeepH-HONPAS environment:
+```
+pip install numpy==2.2.6 -i https://pypi.org/simple
+pip install scipy==1.15.3 -i https://pypi.org/simple
+pip install e3nn -i https://pypi.org/simple
+pip install pymatgen -i https://pypi.org/simple
+pip install h5py -i https://pypi.org/simple
+pip install pathos -i https://pypi.org/simple
+pip install psutil -i https://pypi.org/simple
+```
 For the installation of PyTorch, please refer to the official website and select the suitable command for your system. For example, to install the latest version on a compatible GPU with CUDA installed:
 ```
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
