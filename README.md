@@ -38,17 +38,29 @@ pip install h5py -i https://pypi.org/simple
 pip install pathos -i https://pypi.org/simple
 pip install psutil -i https://pypi.org/simple
 ```
-For the installation of PyTorch, please refer to the official website and select the suitable command for your system. For example, to install the latest version on a compatible GPU with CUDA installed:
+For the installation of PyTorch, please refer to the official website and select the suitable command for your system. For example, to install the latest version on a compatible GPU with CUDA (12.8) installed:
 ```
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
 ```
-The version of PyTorch Geometric needs to be compatible with PyTorch version. To install PyTorch Geometric, additional libraries are necessary: 'pyg-lib', 'torch-cluster', 'torch-sparse', 'torch-scatter', 'torch-spline-conv'. 
+The version of PyTorch Geometric needs to be compatible with PyTorch version. To install PyTorch Geometric, additional libraries are necessary: 'pyg-lib', 'torch-cluster', 'torch-sparse', 'torch-scatter', 'torch-spline-conv'. Before installing PyTorch Geometric, please check the PyTorch version and whether CUDA is available:
+```
+python -c "import torch; print(torch.__version__); print(torch.cuda.is_available()); print(torch.cuda.get_device_name(0)); print(torch.cuda.device_count()); print(torch.version.cuda);"
+```
+On the test machine, the above command outputs:
+```
+2.7.0+cu128
+True
+NVIDIA GeForce RTX 4090
+1
+12.8
+```
+
 Additionally, if electronic band structure calculation is required ('task = [5]' in the inference step), a Julia interpreter is required. Please refer to [https://github.com/mzjb/DeepH-pack] to install Julia. Note that Julia code works only in band calculation, and the predicted Hamiltonian already comes in handy after 'task = [4]', thus the Julia interpreter can be installed elsewhere.
 
 When the environment activated, install DeepH-HONPAS with:
 ```
 git clone
-cd DeepH-HONPAS
+cd -HONPAS
 pip install .
 ```
 
@@ -68,7 +80,7 @@ deeph-train --config train.ini
 ```
 To inference, set the paths for 'work_dir', 'OLP_dir', and 'trained_model_dir' for prediction results, overlap matrix files, and trained model files (training log in the train step). To get the predicted band structures, set 'task = [1, 2, 3, 4, 5]' and run:
 ```
-deeph-inferenece --config inference.ini
+deeph-inference --config inference.ini
 ```
 
 For DeepH-E3, the main difference is the neural network structure used in the training step. Here are the commands for using DeepH-E3 with HONPAS.
