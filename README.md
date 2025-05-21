@@ -48,11 +48,11 @@ python -c "import torch; print(torch.__version__); print(torch.cuda.is_available
 ```
 On the test machine, the above command outputs:
 ```
-2.7.0+cu126
+2.1.0+cu121
 True
 NVIDIA GeForce RTX 4090
 1
-12.6
+12.1
 ```
 Please refer to the PyTorch version labels and download the corresponding packages at https://data.pyg.org/whl/. For example, download:
 ```
@@ -77,7 +77,6 @@ This command should print information like:
 ```
 torch_geometric version: 2.6.1
 ```
-
 
 Additionally, if electronic band structure calculation is required ('task = [5]' in the inference step), a Julia interpreter is required. Please refer to [https://github.com/mzjb/DeepH-pack] to install Julia. Note that Julia code works only in band calculation, and the predicted Hamiltonian already comes in handy after 'task = [4]', thus the Julia interpreter can be installed elsewhere.
 
