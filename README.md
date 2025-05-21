@@ -32,7 +32,7 @@ Here are the installation commands for DeepH-HONPAS environment:
 ```
 pip install numpy==1.25 -i https://pypi.org/simple
 pip install scipy==1.15.3 -i https://pypi.org/simple
-pip install e3nn -i https://pypi.org/simple
+pip install e3nn==0.4.4 -i https://pypi.org/simple
 pip install pymatgen -i https://pypi.org/simple
 pip install h5py -i https://pypi.org/simple
 pip install pathos -i https://pypi.org/simple
@@ -82,8 +82,8 @@ Additionally, if electronic band structure calculation is required ('task = [5]'
 
 When the environment activated, install DeepH-HONPAS with:
 ```
-git clone
-cd -HONPAS
+git clone https://github.com/Kyf4007/DeepH-HONPAS.git
+cd DeepH-HONPAS
 pip install .
 ```
 
