@@ -30,7 +30,7 @@ CUDA Version: 12.8
 
 Here are the installation commands for DeepH-HONPAS environment:
 ```
-pip install numpy==2.2.6 -i https://pypi.org/simple
+pip install numpy==1.25 -i https://pypi.org/simple
 pip install scipy==1.15.3 -i https://pypi.org/simple
 pip install e3nn -i https://pypi.org/simple
 pip install pymatgen -i https://pypi.org/simple
@@ -38,9 +38,9 @@ pip install h5py -i https://pypi.org/simple
 pip install pathos -i https://pypi.org/simple
 pip install psutil -i https://pypi.org/simple
 ```
-For the installation of PyTorch, please refer to the official website and select the suitable command for your system. For example, to install the latest version on a compatible GPU with CUDA (12.8) installed:
+For the installation of PyTorch, please refer to the official website and select the suitable command for your system. For example, to install the cu121 version on a compatible GPU with CUDA (12.8):
 ```
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+pip install torch==2.1.0+cu121 torchvision==0.16.0+cu121 torchaudio==2.1.0+cu121 --index-url https://download.pytorch.org/whl/cu121
 ```
 The version of PyTorch Geometric needs to be compatible with PyTorch version. To install PyTorch Geometric, additional libraries are necessary: 'pyg-lib', 'torch-cluster', 'torch-sparse', 'torch-scatter', 'torch-spline-conv'. Before installing PyTorch Geometric, please check the PyTorch version and whether CUDA is available:
 ```
@@ -48,12 +48,36 @@ python -c "import torch; print(torch.__version__); print(torch.cuda.is_available
 ```
 On the test machine, the above command outputs:
 ```
-2.7.0+cu128
+2.7.0+cu126
 True
 NVIDIA GeForce RTX 4090
 1
-12.8
+12.6
 ```
+Please refer to the PyTorch version labels and download the corresponding packages at https://data.pyg.org/whl/. For example, download:
+```
+torch_spline_conv-1.2.2+pt21cu121-cp311-cp311-win_amd64.whl
+torch_sparse-0.6.18+pt21cu121-cp311-cp311-win_amd64.whl
+torch_scatter-2.1.2+pt21cu121-cp311-cp311-win_amd64.whl
+torch_cluster-1.6.3+pt21cu121-cp311-cp311-win_amd64.whl
+```
+Change directory to the downloaded files, and install PyTorch Geometric. For example:
+```
+pip install "torch_cluster-1.6.3+pt21cu121-cp311-cp311-win_amd64.whl"
+pip install "torch_scatter-2.1.2+pt21cu121-cp311-cp311-win_amd64.whl"
+pip install "torch_sparse-0.6.18+pt21cu121-cp311-cp311-win_amd64.whl"
+pip install "torch_spline_conv-1.2.2+pt21cu121-cp311-cp311-win_amd64.whl"
+pip install torch_geometric -i https://pypi.org/simple
+```
+To verify the installation of PyTorch Geometric:
+```
+python -c "import torch_geometric; print('torch_geometric version:', torch_geometric.__version__)"
+```
+This command should print information like:
+```
+torch_geometric version: 2.6.1
+```
+
 
 Additionally, if electronic band structure calculation is required ('task = [5]' in the inference step), a Julia interpreter is required. Please refer to [https://github.com/mzjb/DeepH-pack] to install Julia. Note that Julia code works only in band calculation, and the predicted Hamiltonian already comes in handy after 'task = [4]', thus the Julia interpreter can be installed elsewhere.
 
