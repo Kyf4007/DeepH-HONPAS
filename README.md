@@ -67,7 +67,7 @@ pip install "torch_cluster-1.6.3+pt21cu121-cp311-cp311-win_amd64.whl"
 pip install "torch_scatter-2.1.2+pt21cu121-cp311-cp311-win_amd64.whl"
 pip install "torch_sparse-0.6.18+pt21cu121-cp311-cp311-win_amd64.whl"
 pip install "torch_spline_conv-1.2.2+pt21cu121-cp311-cp311-win_amd64.whl"
-pip install torch_geometric -i https://pypi.org/simple
+pip install torch_geometric==2.3.1 -i https://pypi.org/simple
 ```
 To verify the installation of PyTorch Geometric:
 ```
