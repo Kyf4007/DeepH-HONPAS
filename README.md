@@ -93,7 +93,9 @@ If you only want to try the machine learning code, the dataset for twisted bilay
 # Usage
 
 For new users who are not familiar with DeepH, it is recommended to first try the workflow provided in the example directory.
-For preprocess, train, and inference, please edit the .ini files in the deeph/scripts/ directory and run the following commands. Here are the commands for using DeepH with HONPAS.
+For preprocess, train, and inference, please edit the .ini files in the deeph/scripts/ directory and run the following commands. 
+All .ini files need to be edited. Template .ini files appear as "preprocess_default.ini" and so on.
+Here are the commands for using DeepH with HONPAS.
 To prepare the dataset, we recommend using the preprocess.ini in the deeph/scripts/ directory. Set the paths for 'raw_dir' and 'processed_dir' and run:
 ```
 deeph-preprocess --config preprocess.ini
