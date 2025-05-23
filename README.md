@@ -92,6 +92,7 @@ If you only want to try the machine learning code, the dataset for twisted bilay
 
 # Usage
 
+For new users who are not familiar with DeepH, it is recommended to first try the workflow provided in the example directory.
 For preprocess, train, and inference, please edit the .ini files in the deeph/scripts/ directory and run the following commands. Here are the commands for using DeepH with HONPAS.
 To prepare the dataset, we recommend using the preprocess.ini in the deeph/scripts/ directory. Set the paths for 'raw_dir' and 'processed_dir' and run:
 ```
@@ -117,4 +118,5 @@ python deephe3-train.py train.ini
 python deephe3-eval.py eval.ini
 ```
 Note that after excecuting 'deephe3-eval', the predicted Hamiltonians are available in the working directory, but 'deeph-inference' is still needed to calculate the band structure. Thus set the 'task = [5]' in inference.ini, set the 'work_dir' and run 'deeph-inferenece --config inference.ini' to sparse matrix calculation for band structures.
+
 
