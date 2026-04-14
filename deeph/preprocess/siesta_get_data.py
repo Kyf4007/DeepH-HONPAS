@@ -1,7 +1,7 @@
 """
 Optimized SIESTA to DeepH data converter
-Vectorized and optimized version for better performance on large systems
 Original code by ZC Tang @ Tsinghua Univ.
+Fixed by YF Ke @ Univ. Sci. Tech. China, vectorized and optimized version for better performance on large systems
 """
 
 import os
